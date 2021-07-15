@@ -1,9 +1,9 @@
-s=input()
-new=''    
-i=len(s)-1
+n=int(input())
+l=[]
+for i in range(0,n):
+    l.append(int(input()))
 
-while(i>=0):
-    new+=s[i]
-    i-=1
-s=new
-print(s)
+for i in range(0,len(l)//2):
+             l[i],l[len(l)-1-i]=l[len(l)-1-i],l[i]
+print(l)
+        
