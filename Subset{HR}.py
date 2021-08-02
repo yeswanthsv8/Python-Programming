@@ -1,11 +1,12 @@
-s=input()
-c=0
-l=list(map(int,s[1:len(s)-1].split(',')))
-l.sort()
-s=set()
+size=int(input())
+l=[int(input()) for i in range(size)]
+count=0
+res=[]
 
-for i in l:
-    for j in l:
-        if i<j and (i+j)%2!=0:
-            s.add((i,j))
+for i in range(size):
+    for j in range(0,size):
+        if l[i]<l[j] and (l[i]+l[j])%2!=0:
+            res.append((l[i],l[j]))
+     
+s=set(res)
 print(len(s))
